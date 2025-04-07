@@ -27,8 +27,6 @@ For more details, please refer to the project page with dataset exploration and 
 
 VisuLogic a challenging benchmark that pioneers visual-logical integration for evaluating Multi-modal Large Language Models (MLLMs)' reasoning capacities. \benchmarkshortname{} contains 1,000 questions which comprise 6 main subjects with 24 fine-grained subcategories, allowing for a detailed evaluation of the models' performance. Distinct from conventional MLLM benchmarks that permit linguistic shortcuts, our framework implements cognitively-grounded visuospatial reasoning tasks to examine authentic multimodal capabilities. \benchmarkshortname{} is constructed through web-sourced data collection with rigorous human proofreading. MLLMs achieve only less than 30\% accuracy on our benchmark, significantly lagging behind human performance (51.4\%), exhibiting critical deficiencies in multimodal reasoning abilities. Furthermore, we conduct various comparative experiments and detailed experimental analyses in this paper.
 
-![Alt text](logo.png)
-
 
 ## Dataset Creation
 
@@ -46,16 +44,17 @@ Should you encounter any data samples potentially breaching the copyright or lic
 
 ## Contact
 - Jiahao Wang: xxx@gmail.com
-- Weiye Xu: xxx@gmail.com
+- Weiye Xu: ustcxwy0271@mail.ustc.edu.cn
 
 ## Citation
 
 **BibTeX:**
 ```bibtex
-@inproceedings{xxx,
-  title={xxx},
-  author={xxx},
-  booktitle={xxx},
-  year={2025},
+@misc{visulogic,
+    title        = {VisuLogic: A Benchmark for Evaluating Visual Reasoning in Multi-modal Large Language Models},
+    author       = {VisuLogic-Benchmark},
+    howpublished = {\url{https://github.com/VisuLogic-Benchmark/VisuLogic-Eval}},
+    year         = {2025},
+    note         = {Accessed: 2025-04-08}
 }
 ```
