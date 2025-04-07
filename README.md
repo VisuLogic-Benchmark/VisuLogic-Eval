@@ -2,7 +2,7 @@
 
 **A Chanllenging Visual-centric Benchmark for Evaluating Multimodal Reasoning in MLLMs!**
 
-Paper, training codes, model checkpoints are coming!
+Paper, training datasets, training codes and model checkpoints are coming!
 
 For more details, please refer to the project page with dataset exploration and visualization tools: [https://visulogic.github.io/](https://visulogic.github.io/).
 
@@ -16,7 +16,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 - **🔥[2025-04-08] Release the benchmark and the codes! 🚀**
 ## To-do
-- [ ] Release the benchmark dataset and eval codes
+- [x] Release the benchmark dataset and eval codes
 - [ ] Release training codes
 - [ ] Release the paper
 - [ ] Release the training dataset
@@ -50,18 +50,16 @@ git clone https://github.com/VisuLogic-Benchmark/VisuLogic-Eval.git
 pip install -r requirements.txt
 ```
 
-Then you can refer to scripts folder and do the eval for spefic model. For instance, If you want to eval the qwen2.5-vl-instruct, you can run by 
+Navigate to the `scripts` directory containing preconfigured evaluation pipelines. Run the corresponding evaluation script with specific parameters. For Qwen2.5-VL-Instruct:
 ```bash
+# Run evaluation for specific model (e.g. Qwen2.5-VL-Instruct)
 cd scripts
-bash eval_qwen.sh
+bash eval_qwen2.5vl_7b_multi.sh 
 ```
 
-## Disclaimers
-The guidelines for the annotators emphasized strict compliance with copyright and licensing rules from the initial data source, specifically avoiding materials from websites that forbid copying and redistribution. 
-Should you encounter any data samples potentially breaching the copyright or licensing regulations of any site, we encourage you to [contact](#contact) us. Upon verification, such samples will be promptly removed.
 
 ## Contact
-- Jiahao Wang: xxx@gmail.com
+- Jiahao Wang: wjhwdscience@stu.xjtu.edu.cn
 - Weiye Xu: ustcxwy0271@mail.ustc.edu.cn
 
 ## Citation
