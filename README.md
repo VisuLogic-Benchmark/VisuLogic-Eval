@@ -50,7 +50,11 @@ git clone https://github.com/VisuLogic-Benchmark/VisuLogic-Eval.git
 pip install -r requirements.txt
 ```
 
-Then you can 
+Then you can refer to scripts folder and do the eval for spefic model. For instance, If you want to eval the qwen2.5-vl-instruct, you can run by 
+```bash
+cd scripts
+bash eval_qwen.sh
+```
 
 ## Disclaimers
 The guidelines for the annotators emphasized strict compliance with copyright and licensing rules from the initial data source, specifically avoiding materials from websites that forbid copying and redistribution. 
