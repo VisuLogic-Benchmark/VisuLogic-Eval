@@ -27,9 +27,9 @@ For more details, please refer to the project page with dataset exploration and 
 ## 🌟 Key Features
 - **Visuo-Logical Challenge**: First benchmark integrating visual perception with logical reasoning for authentic multimodal evaluation
 - **Rigorous Design**: 1,000 meticulously curated questions across 6 domains and 24 subcategories
-- **Anti-Linguistic Shortcut**: Spatial reasoning tasks requiring genuine multimodal understanding
+- **Anti-Linguistic Shortcut**: Visual centric reasoning tasks requiring genuine multimodal understanding
 - **Human-Aligned Evaluation**:  
-  + Human Accuracy: 51.4%
+  + Human Accuracy: >50.0%
   - SOTA MLLMs Accuracy: <30%   
 
 
