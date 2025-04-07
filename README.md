@@ -1,5 +1,6 @@
 # VisuLogic: A Benchmark for Evaluating Visual Reasoning in Multi-modal Large Language Models
 
+**A Chanllenging Visual-centric Benchmark for Evaluating Multimodal Reasoning in MLLMs!**
 
 Paper, training codes, model checkpoints are coming!
 
@@ -7,7 +8,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 # VisuLogic Benchmark
 
-[**🌐 Homepage**](https://visulogic.github.io/) | [**🏆 Leaderboard**](https://visulogic.github.io/) |
+[**🌐 Homepage**](https://visulogic.github.io/) | [**🏆 Leaderboard**(coming soon)](https://visulogic.github.io/) |
 
 
 
@@ -21,17 +22,13 @@ For more details, please refer to the project page with dataset exploration and 
 - [ ] Release the training dataset
 - [ ] Release model ckpts
 
-## Introduction
 
-
-**A Visual-centric Benchmark for Evaluating Multimodal Reasoning in MLLMs**
 
 ## 🌟 Key Features
 - **Visuo-Logical Challenge**: First benchmark integrating visual perception with logical reasoning for authentic multimodal evaluation
 - **Rigorous Design**: 1,000 meticulously curated questions across 6 domains and 24 subcategories
 - **Anti-Linguistic Shortcut**: Spatial reasoning tasks requiring genuine multimodal understanding
 - **Human-Aligned Evaluation**:  
-  ```diff
   + Human Accuracy: 51.4%
   - SOTA MLLMs Accuracy: <30% 
 
