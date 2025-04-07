@@ -23,9 +23,17 @@ For more details, please refer to the project page with dataset exploration and 
 
 ## Introduction
 
-### VisuLogic
 
-VisuLogic a challenging benchmark that pioneers visual-logical integration for evaluating Multi-modal Large Language Models (MLLMs)' reasoning capacities. \benchmarkshortname{} contains 1,000 questions which comprise 6 main subjects with 24 fine-grained subcategories, allowing for a detailed evaluation of the models' performance. Distinct from conventional MLLM benchmarks that permit linguistic shortcuts, our framework implements cognitively-grounded visuospatial reasoning tasks to examine authentic multimodal capabilities. \benchmarkshortname{} is constructed through web-sourced data collection with rigorous human proofreading. MLLMs achieve only less than 30\% accuracy on our benchmark, significantly lagging behind human performance (51.4\%), exhibiting critical deficiencies in multimodal reasoning abilities. Furthermore, we conduct various comparative experiments and detailed experimental analyses in this paper.
+**A Visual-centric Benchmark for Evaluating Multimodal Reasoning in MLLMs**
+
+## 🌟 Key Features
+- **Visuo-Logical Challenge**: First benchmark integrating visual perception with logical reasoning for authentic multimodal evaluation
+- **Rigorous Design**: 1,000 meticulously curated questions across 6 domains and 24 subcategories
+- **Anti-Linguistic Shortcut**: Spatial reasoning tasks requiring genuine multimodal understanding
+- **Human-Aligned Evaluation**:  
+  ```diff
+  + Human Accuracy: 51.4%
+  - SOTA MLLMs Accuracy: <30% 
 
 
 ## Dataset Creation
