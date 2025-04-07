@@ -30,7 +30,7 @@ For more details, please refer to the project page with dataset exploration and 
 - **Anti-Linguistic Shortcut**: Spatial reasoning tasks requiring genuine multimodal understanding
 - **Human-Aligned Evaluation**:  
   + Human Accuracy: 51.4%
-  - SOTA MLLMs Accuracy: <30% 
+  - SOTA MLLMs Accuracy: <30%   
 
 
 ## Dataset Creation
@@ -40,8 +40,17 @@ For more detailed information, please refer to our Hugging Face datasets:
 - [**🤗 VisuLogic Dataset**](https://huggingface.co/datasets/VisuLogic/VisuLogic)
 
 ## Evaluation
+Firstly you should clone our repo and prepare the packages
 
+```bash
+# Clone repository
+git clone https://github.com/VisuLogic-Benchmark/VisuLogic-Eval.git
 
+# Install dependencies
+pip install -r requirements.txt
+```
+
+Then you can 
 
 ## Disclaimers
 The guidelines for the annotators emphasized strict compliance with copyright and licensing rules from the initial data source, specifically avoiding materials from websites that forbid copying and redistribution. 
