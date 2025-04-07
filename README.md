@@ -4,11 +4,11 @@
 
 Paper, training datasets, training codes and model checkpoints are coming!
 
-For more details, please refer to the project page with dataset exploration and visualization tools: [https://visulogic.github.io/](https://visulogic.github.io/).
+For more details, please refer to the project page with dataset exploration and visualization tools: [https://visulogic-benchmark.github.io/VisuLogic/](https://visulogic-benchmark.github.io/VisuLogic/).
 
 # VisuLogic Benchmark
 
-[**🌐 Homepage**](https://visulogic.github.io/) | [**🏆 Leaderboard**(coming soon)](https://visulogic.github.io/) |
+[**🌐 Homepage**](https://visulogic-benchmark.github.io/VisuLogic) | [**🏆 Leaderboard**(coming soon)](https://visulogic-benchmark.github.io/VisuLogic/) |
 
 
 
