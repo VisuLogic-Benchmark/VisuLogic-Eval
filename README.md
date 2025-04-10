@@ -23,7 +23,6 @@ For more details, please refer to the project page with dataset exploration and 
 - [ ] Release model ckpts
 
 
-=======
 ![Overview](assets/overview4.png)
 
 ## 🌟 Key Features
@@ -33,7 +32,6 @@ For more details, please refer to the project page with dataset exploration and 
 - **Human-Aligned Evaluation**:  
   + Human Accuracy: >50.0%
   - SOTA MLLMs Accuracy: <30%   
->>>>>>> 91074c5a36aed48afb7d3e4e3cffff914e09b473
 
 
 ## Benchmark Data
