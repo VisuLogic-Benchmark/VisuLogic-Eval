@@ -1,6 +1,6 @@
 #export CUDA_VISIBLE_DEVICES=2,3
-gpu_num=$1
-gpu_id=$2
+gpu_num=${1:1}
+gpu_id=${2:0}
 OUTPUT_DIR=/PATH/to/your/output
 
 

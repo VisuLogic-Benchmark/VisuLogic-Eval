@@ -1,13 +1,14 @@
 # VisuLogic: A Benchmark for Evaluating Visual Reasoning in Multi-modal Large Language Models
 
+**A Chanllenging Visual-centric Benchmark for Evaluating Multimodal Reasoning in MLLMs!**
 
-Paper, training codes, model checkpoints are coming!
+Paper, training datasets, training codes and model checkpoints are coming!
 
-For more details, please refer to the project page with dataset exploration and visualization tools: [https://visulogic.github.io/](https://visulogic.github.io/).
+For more details, please refer to the project page with dataset exploration and visualization tools: [https://visulogic-benchmark.github.io/VisuLogic/](https://visulogic-benchmark.github.io/VisuLogic/).
 
 # VisuLogic Benchmark
 
-[**🌐 Homepage**](https://visulogic.github.io/) | [**🏆 Leaderboard**](https://visulogic.github.io/) |
+[**🌐 Homepage**](https://visulogic-benchmark.github.io/VisuLogic) | [**🏆 Leaderboard**(coming soon)](https://visulogic-benchmark.github.io/VisuLogic/) |
 
 
 
@@ -15,17 +16,24 @@ For more details, please refer to the project page with dataset exploration and 
 
 - **🔥[2025-04-08] Release the benchmark and the codes! 🚀**
 ## To-do
-- [ ] Release the benchmark dataset and eval codes
+- [x] Release the benchmark dataset and eval codes
 - [ ] Release training codes
 - [ ] Release the paper
 - [ ] Release the training dataset
 - [ ] Release model ckpts
 
-## Introduction
 
-### VisuLogic
+=======
 ![Overview](assets/overview4.png)
-VisuLogic a challenging benchmark that pioneers visual-logical integration for evaluating Multi-modal Large Language Models (MLLMs)' reasoning capacities. VisuLogic contains 1,000 questions which comprise 6 main subjects with 24 fine-grained subcategories, allowing for a detailed evaluation of the models' performance. Distinct from conventional MLLM benchmarks that permit linguistic shortcuts, our framework implements cognitively-grounded visuospatial reasoning tasks to examine authentic multimodal capabilities. VisuLogic is constructed through web-sourced data collection with rigorous human proofreading. MLLMs achieve only less than 30\% accuracy on our benchmark, significantly lagging behind human performance (51.4\%), exhibiting critical deficiencies in multimodal reasoning abilities. Furthermore, we conduct various comparative experiments and detailed experimental analyses in this paper.
+
+## 🌟 Key Features
+- **Visuo-Logical Challenge**: First benchmark integrating visual perception with logical reasoning for authentic multimodal evaluation
+- **Rigorous Design**: 1,000 meticulously curated questions across 6 domains and 24 subcategories
+- **Anti-Linguistic Shortcut**: Visual centric reasoning tasks requiring genuine multimodal understanding
+- **Human-Aligned Evaluation**:  
+  + Human Accuracy: >50.0%
+  - SOTA MLLMs Accuracy: <30%   
+>>>>>>> 91074c5a36aed48afb7d3e4e3cffff914e09b473
 
 
 ## Benchmark Data
@@ -35,15 +43,26 @@ For more detailed information, please refer to our Hugging Face datasets:
 - [**🤗 VisuLogic Dataset**](https://huggingface.co/datasets/VisuLogic/VisuLogic)
 
 ## Evaluation
+Firstly you should clone our repo and prepare the packages
 
+```bash
+# Clone repository
+git clone https://github.com/VisuLogic-Benchmark/VisuLogic-Eval.git
 
+# Install dependencies
+pip install -r requirements.txt
+```
 
-## Disclaimers
-The guidelines for the annotators emphasized strict compliance with copyright and licensing rules from the initial data source, specifically avoiding materials from websites that forbid copying and redistribution. 
-Should you encounter any data samples potentially breaching the copyright or licensing regulations of any site, we encourage you to [contact](#contact) us. Upon verification, such samples will be promptly removed.
+Navigate to the `scripts` directory containing preconfigured evaluation pipelines. Run the corresponding evaluation script with specific parameters. For Qwen2.5-VL-Instruct:
+```bash
+# Run evaluation for specific model (e.g. Qwen2.5-VL-Instruct)
+cd scripts
+bash eval_qwen2.5vl_7b_multi.sh 
+```
+
 
 ## Contact
-- Jiahao Wang: xxx@gmail.com
+- Jiahao Wang: wjhwdscience@stu.xjtu.edu.cn
 - Weiye Xu: ustcxwy0271@mail.ustc.edu.cn
 
 ## Citation
