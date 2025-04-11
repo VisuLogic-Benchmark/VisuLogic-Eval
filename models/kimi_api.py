@@ -1,7 +1,7 @@
 from models.base_model import BaseModel
 import openai
 
-class OpenAIAPIModel(BaseModel):
+class MoonshotAPIModel(BaseModel):
     def __init__(self, model_name: str, api_key: str, base_url: str = "https://api.moonshot.cn/v1", user_prompt: str = None, max_image_size: int = -1):
         self.model_name = model_name
         self.user_prompt = user_prompt
