@@ -24,6 +24,7 @@ class LlavaOnevisionModel(BaseModel):
         self.model = model
         self.tokenizer = tokenizer
         self.image_processor = image_processor
+        self.user_prompt = user_prompt
 
 
     @property
@@ -40,6 +41,7 @@ class LlavaOnevisionModel(BaseModel):
             str: Model prediction result
         """
         image = Image.open(input_data['image_path'])
+        question = input_data['text']
         image_tensor = process_images([image], self.image_processor, self.model.config)
         image_tensor = [_image.to(dtype=torch.float16, device=self.model.device) for _image in image_tensor]
 
@@ -50,7 +52,7 @@ class LlavaOnevisionModel(BaseModel):
         conv.append_message(conv.roles[1], None)
         prompt_question = conv.get_prompt()
 
-        input_ids = tokenizer_image_token(prompt_question, self.tokenizer, IMAGE_TOKEN_INDEX, return_tensors="pt").unsqueeze(0).to(device)
+        input_ids = tokenizer_image_token(prompt_question, self.tokenizer, IMAGE_TOKEN_INDEX, return_tensors="pt").unsqueeze(0).to(self.model.device)
         image_sizes = [image.size]
 
 
