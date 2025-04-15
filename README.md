@@ -40,6 +40,10 @@ For more details, please refer to the project page with dataset exploration and 
   - **Human Accuracy**: >50.0%  
   - **State-of-the-Art (SOTA) MLLMs Accuracy**: <30%
 
+## Introduction
+VisuLogic is a newly designed benchmark aimed at evaluating the visual reasoning capabilities of Multi-modal Large Language Models (MLLMs), independent of textual reasoning processes. It features carefully constructed visual reasoning tasks spanning multiple categories, divided into six types based on required reasoning skills (e.g., Quantitative Reasoning, which involves understanding and deducing changes in the quantity of elements in images). Unlike existing benchmarks, VisuLogic emphasizes vision-based inference rather than simple visual recognition or text generation, significantly increasing its complexity and making it an effective tool for assessing the visual reasoning abilities of multimodal models.
+## Examples of VisuLogic
+![Examples of VisuLogic](assets/examples_in_benchmarks.png)
 ## Installation & Preparation
 ### Default Installation
 For InternVL series, QwenVL series, glm-4v, ovis2, mplug-om3, llava-onevision
@@ -75,25 +79,61 @@ pip install transformers==4.37
 ```
 
 
-## Evaluation
-Firstly you should clone our repo and prepare the packages
-
+## Evaluate Dedfault Models
+For example, just find the corresponding model and execute its script.
 ```bash
-# Clone repository
-git clone https://github.com/VisuLogic-Benchmark/VisuLogic-Eval.git
+sh scripts/eval_internvl.sh
+```
+## Evaluate Your Own Model
 
-# Install dependencies
-pip install -r requirements.txt
+VisuLogic offers a simple and clean code framework to easily evaluate your custom models. You only need to add & change 2 files
+1. add `model/mymodel.py` with template as following:
+```python
+from models.base_model import BaseModel
+class mymodel(BaseModel):
+    def __init__(self, model_path: str, user_prompt: str = None):
+      pass
+
+    def predict(self, input_data: Any) -> Any:
+      """
+        Model prediction interface
+        Args:
+            input_data: 
+              input_data['text'] # question text
+              input_data['image_path'] # image path of question
+      """
+        pass
+    
+    @property
+    def name(self) -> str:
+        """Model name"""
+        pass
+```
+2. modified `model/__init__.py`
+```python
+...
+from models.mymodel import mymodel
+def load_model(args):
+  ...
+  elif 'mymodel' in args.model_path.lower():
+    model = mymodel(model_path = args.model_path,
+                    user_prompt = args.user_prompt)
+  ...
+  return model
+```
+3. run scripts
+```bash
+mkdir -p outputs/
+python evaluation/eval_model.py \
+    --input_file path/to/data.jsonl \
+    --output_file outputs/output_file.jsonl \
+    --model_path mymodel \
+    --judge_api_key sk-xxx
 ```
 
-Navigate to the `scripts` directory containing preconfigured evaluation pipelines. Run the corresponding evaluation script with specific parameters. For Qwen2.5-VL-Instruct:
-```bash
-# Run evaluation for specific model (e.g. Qwen2.5-VL-Instruct)
-cd scripts
-bash eval_qwen2.5vl_7b_multi.sh 
-```
-
-
+## Pipeline of Evaluation
+![pipeline of response filter](assets/response_extract.png)
+VisuLogic evaluates model accuracy by combining boxed, predefined, and LLM-based extraction methods to produce a single choice (a/b/c/d), then compares it with the ground-truth label to determine correctness.
 ## Contact
 - Jiahao Wang: wjhwdscience@stu.xjtu.edu.cn
 - Weiye Xu: ustcxwy0271@mail.ustc.edu.cn
