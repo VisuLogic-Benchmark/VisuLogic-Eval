@@ -1,6 +1,6 @@
 # VisuLogic: A Benchmark for Evaluating Visual Reasoning in Multi-modal Large Language Models
 
-**A Chanllenging Visual-centric Benchmark for Evaluating Multimodal Reasoning in MLLMs!**
+**A Challenging Visual-centric Benchmark for Evaluating Multimodal Reasoning in MLLMs!**
 
 Paper, training datasets, training codes and model checkpoints are coming!
 
@@ -15,7 +15,7 @@ For more details, please refer to the project page with dataset exploration and 
 ## 🔔News
 
 - **🔥[2025-04-08] Release the benchmark and the codes! 🚀**
-## To-do
+## ✅ To-do
 - [x] Release the benchmark dataset and eval codes
 - [ ] Release training codes
 - [ ] Release the paper
@@ -24,6 +24,10 @@ For more details, please refer to the project page with dataset exploration and 
 
 
 ![Overview](assets/overview4.png)
+
+
+## 📖 Introduction
+VisuLogic is a newly designed benchmark aimed at evaluating the visual reasoning capabilities of Multi-modal Large Language Models (MLLMs), independent of textual reasoning processes. It features carefully constructed visual reasoning tasks spanning multiple categories, divided into six types based on required reasoning skills (e.g., Quantitative Reasoning, which involves understanding and deducing changes in the quantity of elements in images). Unlike existing benchmarks, VisuLogic emphasizes vision-based inference rather than simple visual recognition or text generation, significantly increasing its complexity and making it an effective tool for assessing the visual reasoning abilities of multimodal models.
 
 ## 🌟 Key Features
 
@@ -40,34 +44,33 @@ For more details, please refer to the project page with dataset exploration and 
   - **Human Accuracy**: >50.0%  
   - **State-of-the-Art (SOTA) MLLMs Accuracy**: <30%
 
-## Introduction
-VisuLogic is a newly designed benchmark aimed at evaluating the visual reasoning capabilities of Multi-modal Large Language Models (MLLMs), independent of textual reasoning processes. It features carefully constructed visual reasoning tasks spanning multiple categories, divided into six types based on required reasoning skills (e.g., Quantitative Reasoning, which involves understanding and deducing changes in the quantity of elements in images). Unlike existing benchmarks, VisuLogic emphasizes vision-based inference rather than simple visual recognition or text generation, significantly increasing its complexity and making it an effective tool for assessing the visual reasoning abilities of multimodal models.
-## Examples of VisuLogic
+## 🖼️  Examples of VisuLogic
 ![Examples of VisuLogic](assets/examples_in_benchmarks.png)
 ## Installation & Preparation
-### Default Installation
+### 🛠️ Default Installation
 For InternVL series, QwenVL series, glm-4v, ovis2, mplug-om3, llava-onevision
 ```bash
 pip install -r requirements.txt
 ```
-### minicpm-o Installation
+### 🛠️ For Specific Models
+#### minicpm-o Installation
 ```bash
 pip install -r requirements.txt
 pip install transformers==4.44.2
 ```
-### llava Installation
+#### llava Installation
 ```bash
 pip install -r requirements.txt
 pip install transformers==4.37
 ```
-### sharegpt4v Installation
+#### sharegpt4v Installation
 > For more details, please refer to this [link](https://huggingface.co/Lin-Chen/ShareGPT4V-7B).
 ```bash
 pip install -r requirements.txt
 pip install transformers==4.37
 ```
 
-### Prepare Benchmark Data
+### 📂 Prepare Benchmark Data
 1. Download huggingface dataset in https://huggingface.co/datasets/VisuLogic/VisuLogic
 2. unzip images.zip
 ```
@@ -79,14 +82,16 @@ pip install transformers==4.37
 ```
 
 
-## Evaluate Dedfault Models
+## 🚀 Evaluate Dedfault Models
 For example, just find the corresponding model and execute its script.
 ```bash
 sh scripts/eval_internvl.sh
 ```
-## Evaluate Your Own Model
+## 🔧 Evaluate Your Own Model
 
-VisuLogic offers a simple and clean code framework to easily evaluate your custom models. You only need to add & change 2 files
+VisuLogic provides a clean and extensible framework to evaluate custom models. You only need to add & change 2 files
+
+### Steps to Add Your Model.
 1. add `model/mymodel.py` with template as following:
 ```python
 from models.base_model import BaseModel
@@ -131,14 +136,14 @@ python evaluation/eval_model.py \
     --judge_api_key sk-xxx
 ```
 
-## Pipeline of Evaluation
+## 🛠️ Pipeline of Evaluation
 ![pipeline of response filter](assets/response_extract.png)
 VisuLogic evaluates model accuracy by combining boxed, predefined, and LLM-based extraction methods to produce a single choice (a/b/c/d), then compares it with the ground-truth label to determine correctness.
-## Contact
+## 📩 Contact
 - Jiahao Wang: wjhwdscience@stu.xjtu.edu.cn
 - Weiye Xu: ustcxwy0271@mail.ustc.edu.cn
 
-## Citation
+## 📜 Citation
 
 **BibTeX:**
 ```bibtex
@@ -150,3 +155,4 @@ VisuLogic evaluates model accuracy by combining boxed, predefined, and LLM-based
     note         = {Accessed: 2025-04-08}
 }
 ```
+🎉 Thank you for your interest in VisuLogic! We hope this benchmark helps drive advancements in multimodal visual reasoning! 🚀
