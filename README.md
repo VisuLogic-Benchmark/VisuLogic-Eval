@@ -8,7 +8,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 # VisuLogic Benchmark
 
-[**🌐 Homepage**](https://visulogic-benchmark.github.io/VisuLogic) | [**🏆 Leaderboard**(coming soon)](https://visulogic-benchmark.github.io/VisuLogic/) |
+[**🌐 Homepage**](https://visulogic-benchmark.github.io/VisuLogic) | [**🏆 Leaderboard**(coming soon)](https://visulogic-benchmark.github.io/VisuLogic/) | [**🤗 Benchmark**](https://huggingface.co/datasets/VisuLogic/VisuLogic) | [**💻 Eval Code**](https://huggingface.co/datasets/VisuLogic/VisuLogic) | [**🤗 Train Data**(coming soon)](https://huggingface.co/datasets/VisuLogic/VisuLogic) | [**💻 Train Code**](https://github.com/VisuLogic-Benchmark/VisuLogic-Train)
 
 
 
@@ -36,15 +36,44 @@ For more details, please refer to the project page with dataset exploration and 
 - 📝 **Anti-Linguistic Shortcut**  
   Designed to avoid linguistic biases, ensuring tasks rely on **genuine visual reasoning** rather than shortcuts.
 
-- 📊 **Human-Aligned Evaluation**  
+- 👤 **Human-Aligned Evaluation**  
   - **Human Accuracy**: >50.0%  
   - **State-of-the-Art (SOTA) MLLMs Accuracy**: <30%
 
-## Benchmark Data
+## Installation & Preparation
+### Default Installation
+For InternVL series, QwenVL series, glm-4v, ovis2, mplug-om3, llava-onevision
+```bash
+pip install -r requirements.txt
+```
+### minicpm-o Installation
+```bash
+pip install -r requirements.txt
+pip install transformers==4.44.2
+```
+### llava Installation
+```bash
+pip install -r requirements.txt
+pip install transformers==4.37
+```
+### sharegpt4v Installation
+> For more details, please refer to this [link](https://huggingface.co/Lin-Chen/ShareGPT4V-7B).
+```bash
+pip install -r requirements.txt
+pip install transformers==4.37
+```
 
-For more detailed information, please refer to our Hugging Face datasets:
+### Prepare Benchmark Data
+1. Download huggingface dataset in https://huggingface.co/datasets/VisuLogic/VisuLogic
+2. unzip images.zip
+```
+|- ...
+|- data.jsonl
+|- images/ (unzip from images.zip)
+  |- 00000.png
+  |- 00001.png
+```
 
-- [**🤗 VisuLogic Dataset**](https://huggingface.co/datasets/VisuLogic/VisuLogic)
 
 ## Evaluation
 Firstly you should clone our repo and prepare the packages

@@ -7,6 +7,7 @@ import time
 from openai import OpenAI
 from tqdm import tqdm
 from models import load_model
+from models.prompts import COT_PROMPT
 Option_list = ['A','B','C','D']
 
 class ModelEvaluator:
@@ -14,13 +15,11 @@ class ModelEvaluator:
         self.model = load_model(args)
         self.input_file = args.input_file
         self.output_file = args.output_file
-        self.score_field = getattr(args, 'score_field', 'score')
-        self.tag_field = getattr(args, 'tag_field', 'tag')
         self.verbose = getattr(args, 'verbose', False)
         self.api_key = getattr(args, 'api_key', '')
         self.base_url = getattr(args, 'base_url', '')
         self.judge_model_name = getattr(args, 'judge_model_name', 'gpt-4-mini')
-        self.judge_client = OpenAI(api_key=self.api_key, base_url=self.base_url) if self.api_key else None
+        self.judge_client = OpenAI(api_key=self.judege_api_key, base_url=self.judge_base_url) if self.api_key else None
         
         # Define tag order
         self.tag_order = [
@@ -132,7 +131,7 @@ class ModelEvaluator:
 
         for result in eval_results:
             score = 1.0 if result['answer'].lower() == result['extracted_answer'].lower() else 0.0
-            tag = result[self.tag_field]
+            tag = result['tag']
             
             all_scores.append(score)
             if tag in self.tag_order:
@@ -196,17 +195,19 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--input_file', type=str, required=True, help='Input jsonl file path')
     parser.add_argument('--output_file', type=str, required=True, help='Output jsonl file path')
-    parser.add_argument('--model_type', type=str, required=True, help='Model type to load')
     parser.add_argument('--model_path', type=str, required=True, help='Model path or name')
-    parser.add_argument('--score_field', type=str, default='score', help='Score field name')
-    parser.add_argument('--tag_field', type=str, default='tag', help='Tag field name')
     parser.add_argument('--verbose', '-v', action='store_true', help='Print detailed information')
     parser.add_argument('--api_key', type=str, default='', help='API key')
-    parser.add_argument('--base_url', type=str, default='', help='Base URL')
+    parser.add_argument('--judge_api_key', type=str, default='', help='judge API key')
+    parser.add_argument('--base_url', type=str, default='https://api.openai.com/v1', help='Base URL')
+    parser.add_argument('--judge_base_url', type=str, default='https://api.openai.com/v1', help='Base URL')
     parser.add_argument('--user_prompt', type=str, default='', help='user prompt')
-    parser.add_argument('--judge_model_name', type=str, default='gpt-4-mini', help='Judge model name')
+    parser.add_argument('--judge_model_name', type=str, default='gpt-4o-mini', help='Judge model name')
     
     args = parser.parse_args()
+
+    if args.user_prompt == '': # default
+        args.user_prompt = COT_PROMPT
     
     evaluator = ModelEvaluator(args)
     evaluator.evaluate()
