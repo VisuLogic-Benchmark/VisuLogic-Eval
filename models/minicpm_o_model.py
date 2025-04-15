@@ -4,7 +4,7 @@ from typing import Any, Dict
 import torch
 from transformers import AutoModel, AutoTokenizer
 
-class MiniCPMModel(BaseModel):
+class MiniCPMOModel(BaseModel):
     def __init__(self, model_path: str,user_prompt: str = None):
         """
         Initialize the MiniCPM Model.
