@@ -17,18 +17,16 @@ For more details, please refer to the project page with dataset exploration and 
 - **🔥[2025-04-08] Release the benchmark and the codes! 🚀**
 ## ✅ To-do
 - [x] Release the benchmark dataset and eval codes
-- [ ] Release training codes
-- [ ] Release the paper
-- [ ] Release the training dataset
-- [ ] Release model ckpts
+- [x] Release training codes
+- [x] Release the paper
+- [x] Release the training dataset
+- [x] Release model ckpts
 
-
-![Overview](assets/overview4.png)
 
 
 ## 📖 Introduction
 VisuLogic is a newly designed benchmark aimed at evaluating the visual reasoning capabilities of Multi-modal Large Language Models (MLLMs), independent of textual reasoning processes. It features carefully constructed visual reasoning tasks spanning multiple categories, divided into six types based on required reasoning skills (e.g., Quantitative Reasoning, which involves understanding and deducing changes in the quantity of elements in images). Unlike existing benchmarks, VisuLogic emphasizes vision-based inference rather than simple visual recognition or text generation, significantly increasing its complexity and making it an effective tool for assessing the visual reasoning abilities of multimodal models.
-
+![Overview](assets/overview4.png)
 ## 🌟 Key Features
 
 - 🚀 **Visuo-Logical Challenge**  
