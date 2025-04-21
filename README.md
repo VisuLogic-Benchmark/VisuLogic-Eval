@@ -147,8 +147,8 @@ VisuLogic evaluates model accuracy by combining boxed, predefined, and LLM-based
 Please refer to [VisuLogic-Train](https://github.com/VisuLogic-Benchmark/VisuLogic-Train.git) for training codes.
 
 ## 📩 Contact
-- Jiahao Wang: wjhwdscience@stu.xjtu.edu.cn
 - Weiye Xu: ustcxwy0271@mail.ustc.edu.cn
+- Jiahao Wang: wjhwdscience@stu.xjtu.edu.cn
 
 ## 📜 Citation
 
