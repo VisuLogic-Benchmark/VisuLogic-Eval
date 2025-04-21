@@ -142,9 +142,9 @@ python evaluation/eval_model.py \
 ![pipeline of response filter](assets/response_extract.png)
 VisuLogic evaluates model accuracy by combining boxed, predefined, and LLM-based extraction methods to produce a single choice (a/b/c/d), then compares it with the ground-truth label to determine correctness.
 
-## 📦Training
+## 📦 Training
 
-Please refer to [VisuLogic-Eval](https://github.com/VisuLogic-Benchmark/VisuLogic-Train.git) for training codes.
+Please refer to [VisuLogic-Train](https://github.com/VisuLogic-Benchmark/VisuLogic-Train.git) for training codes.
 
 ## 📩 Contact
 - Jiahao Wang: wjhwdscience@stu.xjtu.edu.cn
