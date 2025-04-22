@@ -152,12 +152,12 @@ Please refer to [VisuLogic-Train](https://github.com/VisuLogic-Benchmark/VisuLog
 
 **BibTeX:**
 ```bibtex
-@misc{visulogic,
-    title        = {VisuLogic: A Benchmark for Evaluating Visual Reasoning in Multi-modal Large Language Models},
-    author       = {VisuLogic-Benchmark},
-    howpublished = {\url{https://github.com/VisuLogic-Benchmark/VisuLogic-Eval}},
-    year         = {2025},
-    note         = {Accessed: 2025-04-08}
+@article{xu2025visulogic,
+  title={VisuLogic: A Benchmark for Evaluating Visual Reasoning in Multi-modal Large Language Models},
+  author={Xu, Weiye and Wang, Jiahao and Wang, Weiyun and Chen, Zhe and Zhou, Wengang and Yang, Aijun and Lu, Lewei and Li, Houqiang and Wang, Xiaohua and Zhu, Xizhou and Wang, Wenhai and Dai, Jifeng and Zhu, Jinguo},
+  journal={arXiv preprint arXiv:2504.15279},
+  year={2025},
+  url={https://arxiv.org/abs/2504.15279}
 }
 ```
 🎉 Thank you for your interest in VisuLogic! We hope this benchmark helps drive advancements in multimodal visual reasoning! 🚀
