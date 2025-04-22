@@ -33,7 +33,7 @@ VisuLogic is a newly designed benchmark aimed at evaluating the visual reasoning
   The first benchmark to integrate **visual perception** with **logical reasoning**, enabling authentic multimodal evaluation. Most models score below **30%** accuracy—only slightly above the 25% random baseline and far below the 51.4% achieved by humans—revealing significant gaps in visual reasoning.
   
 - 🛠️ **Rigorous Design**  
-  Includes **1,000 meticulously curated questions**, spanning **6 domains** and **24 subcategories**, for comprehensive performance evaluation.
+  Includes **1,000 meticulously curated questions**, spanning **6 domains** and **23 subcategories**, for comprehensive performance evaluation.
   
 - 📝 **Anti-Linguistic Shortcut**  
   Designed to avoid linguistic reasoning, ensuring tasks rely on **genuine visual reasoning** rather than shortcuts.
