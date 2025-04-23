@@ -9,7 +9,7 @@ For more details, please refer to the project page for dataset exploration, code
 # VisuLogic Resouces
 
 
-[**🌐 Homepage**](https://visulogic-benchmark.github.io/VisuLogic) | [**🏆 Leaderboard**](https://visulogic-benchmark.github.io/VisuLogic/) | [**📖 Paper**](http://arxiv.org/abs/2504.15279) | [**🤗 Benchmark**](https://huggingface.co/datasets/VisuLogic/VisuLogic) | [**💻 Eval Code**](https://huggingface.co/datasets/VisuLogic/VisuLogic) | [**🤗 Train Data**](https://huggingface.co/datasets/VisuLogic/VisuLogic) | [**💻 Train Code**](https://github.com/VisuLogic-Benchmark/VisuLogic-Train)
+[**🌐 Homepage**](https://visulogic-benchmark.github.io/VisuLogic) | [**🏆 Leaderboard**](https://visulogic-benchmark.github.io/VisuLogic/) | [**📖 Paper**](http://arxiv.org/abs/2504.15279) | [**🤗 Benchmark**](https://huggingface.co/datasets/VisuLogic/VisuLogic) | [**💻 Eval Code**](https://github.com/VisuLogic-Benchmark/VisuLogic-Eval) | [**🤗 Train Data**](https://huggingface.co/datasets/VisuLogic/VisuLogic-Train) | [**💻 Train Code**](https://github.com/VisuLogic-Benchmark/VisuLogic-Train)
 
 
 ## 🔔News
