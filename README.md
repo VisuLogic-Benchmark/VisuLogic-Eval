@@ -13,6 +13,7 @@ For more details, please refer to the project page for dataset exploration, code
 
 
 ## 🔔News
+- **🔥[2025-04-26] [VisuLogic](https://github.com/open-compass/VLMEvalKit/pull/944) has been merged into [VLMEvalkit](https://github.com/OpenCompass/VLMEvalkit). You can evaluate your model on VisuLogic with it ! Usage see [VLMEvalkit](https://github.com/open-compass/VLMEvalKit/blob/main/docs/en/Quickstart.md) ! 🚀** 
 - **🔥[2025-04-22] Release the paper, training data and training code! 🚀**
 - **🔥[2025-04-08] Release the benchmark and the code! 🚀**
 ## ✅ To-do
