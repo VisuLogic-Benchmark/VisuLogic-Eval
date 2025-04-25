@@ -2,7 +2,7 @@
 
 **A Challenging Visual-centric Benchmark for Evaluating Multimodal Reasoning in MLLMs!**
 
-This the Eval codes repo of [VisuLogic](https://visulogic-benchmark.github.io/VisuLogic).
+This is the Eval code repo of [VisuLogic](https://visulogic-benchmark.github.io/VisuLogic).
 
 For more details, please refer to the project page for dataset exploration, code repos and visualization tools: [https://visulogic-benchmark.github.io/VisuLogic/](https://visulogic-benchmark.github.io/VisuLogic/).
 
@@ -14,10 +14,10 @@ For more details, please refer to the project page for dataset exploration, code
 
 ## 🔔News
 - **🔥[2025-04-22] Release the paper, training data and training code! 🚀**
-- **🔥[2025-04-08] Release the benchmark and the codes! 🚀**
+- **🔥[2025-04-08] Release the benchmark and the code! 🚀**
 ## ✅ To-do
-- [x] Release the benchmark dataset and eval codes
-- [x] Release training codes
+- [x] Release the benchmark dataset and eval code
+- [x] Release training code
 - [x] Release the paper
 - [x] Release the training dataset
 - [x] Release model ckpts
@@ -142,7 +142,7 @@ VisuLogic evaluates model accuracy by combining boxed, predefined, and LLM-based
 
 ## 📦 Training
 
-Please refer to [VisuLogic-Train](https://github.com/VisuLogic-Benchmark/VisuLogic-Train.git) for training codes.
+Please refer to [VisuLogic-Train](https://github.com/VisuLogic-Benchmark/VisuLogic-Train.git) for training code.
 
 ## 📩 Contact
 - Weiye Xu: ustcxwy0271@mail.ustc.edu.cn
