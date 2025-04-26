@@ -161,4 +161,4 @@ Please refer to [VisuLogic-Train](https://github.com/VisuLogic-Benchmark/VisuLog
   url={https://arxiv.org/abs/2504.15279}
 }
 ```
-🎉 Thank you for your interest in VisuLogic! We hope this benchmark helps drive advancements in multimodal visual reasoning! 🚀
+🎉 Thank you for your interest in VisuLogic! We hope this benchmark helps drive advancements in multimodal reasoning! 🚀
