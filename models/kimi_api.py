@@ -1,5 +1,9 @@
 from models.base_model import BaseModel
 import openai
+from PIL import Image
+import base64
+from io import BytesIO
+from typing import Dict
 
 class MoonshotAPIModel(BaseModel):
     def __init__(self, model_name: str, api_key: str, base_url: str = "https://api.moonshot.cn/v1", user_prompt: str = None, max_image_size: int = -1):

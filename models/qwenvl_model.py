@@ -10,7 +10,7 @@ import json
 from tqdm import tqdm
 import os
 from qwen_vl_utils import process_vision_info
-
+from models.base_model import BaseModel
 
 class QwenVisionModel(BaseModel):
     def __init__(self, model_path: str,user_prompt: str = None, max_image_size: int = -1):
@@ -29,8 +29,9 @@ class QwenVisionModel(BaseModel):
         self.user_prompt = user_prompt
         self.max_image_size = max_image_size
         # load model and processor
-        ModelClass = Qwen2_5_VLForConditionalGeneration if model_version == "2.5" else Qwen2VLForConditionalGeneration
-        self.model = ModelClass.from_pretrained(
+        # ModelClass = Qwen2_5_VLForConditionalGeneration if model_version == "2.5" else Qwen2VLForConditionalGeneration
+
+        self.model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
             model_path,
             torch_dtype="auto",
             device_map="auto"
@@ -75,7 +76,7 @@ class QwenVisionModel(BaseModel):
         # Extract image path from input data
         # Prepare inputs
         text, image_inputs, video_inputs = self._prepare_input(
-            image_path=image_path['image_path'],
+            image_path=input_data['image_path'],
             text=input_data['text']
         )
         

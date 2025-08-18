@@ -11,7 +11,7 @@ from tqdm import tqdm
 import re
 from datetime import datetime
 import json
-
+from models.base_model import BaseModel
 
 class InternVLModel(BaseModel):
     IMAGENET_MEAN = (0.485, 0.456, 0.406)

@@ -1,3 +1,5 @@
+import sys
+sys.path.append(".")
 import argparse
 import json
 import statistics
@@ -7,7 +9,7 @@ import time
 from openai import OpenAI
 from tqdm import tqdm
 from models import load_model
-from models.prompts import COT_PROMPT
+from models.prompts import COT_PROMPT, RL_COT_PROMPT, SFT_PROMPT
 Option_list = ['A','B','C','D']
 
 class ModelEvaluator:
@@ -64,6 +66,20 @@ class ModelEvaluator:
             last_boxed_content = text
             
         return 'N' if last_boxed_content==None else last_boxed_content
+
+
+    def extract_answer_tag_content(self, text):
+
+        text = str(text)
+        match = re.search(r'<answer>(.*?)</answer>', text, re.DOTALL)
+        if match:
+            content = match.group(1).strip()
+            if ("LETTER".lower() in content.lower() or 
+                'or' in content or 
+                len(content) > 2):
+                return text
+            return content
+        return 'N'
 
     def extract_lang_content(self, ans):
         ans = str(ans)
@@ -160,7 +176,11 @@ class ModelEvaluator:
         eval_results = []
         for item in tqdm(eval_data, desc="Evaluating"):
             # Model inference
-            model_response = self.model.predict(item['image_path'], item['question'])
+            input_dict = {
+                "image_path": os.path.join(self.input_file.replace("data.jsonl",""),item['image_path']),
+                "text": item['question']
+            }
+            model_response = self.model.predict(input_dict)
             
             # Extract answer
             extracted_answer, extractor = self.extract_answer_v1(model_response)
@@ -207,7 +227,7 @@ def main():
     args = parser.parse_args()
 
     if args.user_prompt == '': # default
-        args.user_prompt = COT_PROMPT
+        args.user_prompt = SFT_PROMPT
     
     evaluator = ModelEvaluator(args)
     evaluator.evaluate()

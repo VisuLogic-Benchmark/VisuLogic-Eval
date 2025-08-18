@@ -1,1 +1,3 @@
 COT_PROMPT = "Solve the complex visual logical reasoning problem through step-by-step reasoning. Think about the reasoning process first and answer the question following this format: Answer: \\boxed{$LETTER}."
+RL_COT_PROMPT = "Solve the complex visual logical reasoning problem through step-by-step reasoning. Think about the reasoning process first and answer the question following this format: <think> THINKING </think><answer> ANSWER </answer>."
+SFT_PROMPT = "Just Answer the question following this format: Answer:\\boxed{$LETTER}"
